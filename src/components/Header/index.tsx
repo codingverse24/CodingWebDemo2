@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
+import logo from "../../assets/logo3.png"
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import {
@@ -15,9 +16,13 @@ import {
   Outline,
   Span,
 } from "./styles";
+import { useHistory, useLocation } from "react-router-dom";
 
 const Header = ({ t }: { t: TFunction }) => {
+
   const [visible, setVisibility] = useState(false);
+  const location=useLocation()
+  const history=useHistory()
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -40,7 +45,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Mission")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+          <Span>{t("Get Started")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
@@ -59,10 +64,17 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            {/* <SvgIcon src="logo.svg" width="101px" height="64px" /> */}
+            <div  onClick={()=>history.push("/")} style={{width:"100px",cursor:"pointer"}} >
+               <img style={{width:"100%"}} src={logo} alt="" />
+            </div>
+           
           </LogoContainer>
           <NotHidden>
-            <MenuItem />
+            {
+              location.pathname !== "/privacy" ? (<MenuItem />) : null
+            }
+            
           </NotHidden>
           <Burger onClick={toggleButton}>
             <Outline />

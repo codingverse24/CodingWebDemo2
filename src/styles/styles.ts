@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import stars from "../../public/img/icons/star.webp"
 
 export const Styles = createGlobalStyle`
 
@@ -21,6 +22,16 @@ export const Styles = createGlobalStyle`
         font-family: 'Motiva Sans Light', sans-serif;
     }
 
+    body::after {
+  content: '';
+//   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../public/img/icons/star.webp");
+  opacity: 0.2;
+}
 
     body {
         margin:0;
@@ -29,6 +40,16 @@ export const Styles = createGlobalStyle`
         outline: 0;
         background: #fff;
         overflow-x: hidden;
+   
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensures it takes up the full viewport height */
+  background: linear-gradient(145deg, #020024, #7F00FF, #00AEEF, #000000);
+  background-size: cover; /* Ensures the gradient stretches fully */
+  background-attachment: fixed; /* Keeps it fixed during scrolling */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+
     }
 
     a:hover {
@@ -45,10 +66,10 @@ export const Styles = createGlobalStyle`
         width: 100%;  
         padding: 1rem 1.25rem;
 
-        :focus-within {
-            background: none;
-            box-shadow: #2e186a 0px 0px 0px 1px;
-        }
+        // :focus-within {
+        //     background: none;
+        //     box-shadow: #2e186a 0px 0px 0px 1px;
+        // }
     }
 
     h1,
@@ -58,7 +79,7 @@ export const Styles = createGlobalStyle`
     h5,
     h6 {
         font-family: 'Motiva Sans Bold', serif;
-        color: #18216d;
+        color: #FFFFFF;
         font-size: 56px;
         line-height: 1.18;
 
@@ -72,7 +93,7 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: #18216d;
+        color: #FFFFFF;
         font-size: 21px;        
         line-height: 1.41;
     }
@@ -84,7 +105,7 @@ export const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
-        color: #2E186A;
+        color: #00AEEF;
 
         :hover {
             color: #2e186a;

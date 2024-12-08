@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Code that Delivers Success",
+  "text": "Explore a range of services designed to meet your development needs. Whether it's delivering top-notch freelance projects, sharing knowledge through insightful blogs, or crafting unique applications, Codingverse has the expertise to bring your vision to life.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Why Choose Codingverse?",
+      "content": "We deliver expert coding solutions with creativity, reliability, and a passion for excellence.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "What Services Do We Offer?",
+      "content": "Freelance projects, coding blogs, and custom app development to meet all your needs.",
       "icon": "notes.svg"
     }
   ]

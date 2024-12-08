@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
+import logo from "../../assets/logo2.png"
 import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
@@ -43,7 +44,10 @@ const ContentBlock = ({
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+          {/* <div>
+            <img style={{width:"100%"}} src={logo} alt="logo" />
+          </div> */}
+            <SvgIcon src={icon} width="100%" height="100%" /> 
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>

@@ -13,10 +13,11 @@ import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
-  const ValidationType = ({ type }: ValidationTypeProps) => {
+ const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
     return <Span>{ErrorMessage}</Span>;
   };
+  
 
   return (
     <ContactContainer id={id}>
